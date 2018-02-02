@@ -40,7 +40,7 @@ include('includes/connect.php');
             
             <div class="right">
                 <div class ="right_menu">
-                    <a href="##">Main</a>
+                    <a href="##">Category</a>
                     <a href="##">Articles</a>
                     <a href="##">Video</a>
                     <a href="##">Pfoto</a>

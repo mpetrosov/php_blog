@@ -20,7 +20,6 @@ include('includes/connect.php');
             <div class="left"> 
                 <?php
                     $result = mysqli_query($conn,"SELECT * FROM articles") or die(mysqli_error($conn));
-                    // $data = mysqli_fetch_array($result);
                     
                     while($data = mysqli_fetch_array($result)){
                         printf('
@@ -38,10 +37,15 @@ include('includes/connect.php');
             
             <div class="right">
                 <div class ="right_menu">
-                    <a href="##">Main</a>
+                    <a href="##">Category</a>
                     <a href="##">Articles</a>
                     <a href="##">Video</a>
                     <a href="##">Pfoto</a>
+                </div>
+                <div class="right_bottom">
+                    <div class ="divbutton">
+                        <a href="edit.php">POST</a>
+                    </div>
                 </div>
             </div>
         </div>
