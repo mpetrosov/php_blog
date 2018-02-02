@@ -1,5 +1,0 @@
-Database table
-id
-title
-m_desc // mini description
-desc //description
