@@ -17,7 +17,7 @@ include('includes/connect.php');
            <a href="index.php"> <img id="logo" src="img/blog_header.jpg" /></a>
         </div>
         <div class="content">
-            <div class="left"> 
+            <div class="right"> 
                 <?php
                     $id = (isset($_GET["id"]) && $_GET["id"])  ? mysqli_real_escape_string($conn, $_GET["id"]) : die('No id specified');
 
@@ -38,8 +38,8 @@ include('includes/connect.php');
             
             </div>
             
-            <div class="right">
-                <div class ="right_menu">
+            <div class="left">
+                <div class ="left_menu">
                     <a href="##">Category</a>
                     <a href="##">Articles</a>
                     <a href="##">Video</a>

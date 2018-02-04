@@ -39,7 +39,7 @@ body{
     width: 100%;
 }
 
-.left{
+.right{
     margin-top: 10px;
     width: 780px;
     padding-left: 5px;
@@ -61,6 +61,8 @@ body{
     margin-right: 15px;
 }
 .article p{
+    text-decoration: none;
+    text-align: center;
     text-indent: 10px;
     padding-right: 10px;
     margin-top: 10px;
@@ -76,29 +78,34 @@ body{
 }
 
 
-.right{
+.left{
     margin-top: 10px;
     width: 180px;
-    height: 100%;
+    height: auto;
     float: left;
     background: #87CEEB;
     border: 5px solid #444444;
     border-radius: 10px;
 }
 
-.right_menu a{
+.left_menu a{
     display: block;
     text-align: center;
     margin: 5px, 0;
     padding-top: 10px;
     text-decoration: none;
 }
+.menu_head{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
 
 h2 {
     text-align: center;
   }
 
-  .right_bottom{
+  .left_bottom{
       padding-top: 20px;
       margin-left: 60px;
   }

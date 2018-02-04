@@ -19,30 +19,32 @@ include('includes/connect.php');
         <div class="content">
             <div class="right"> 
                 <?php
-                    $result = mysqli_query($conn,"SELECT * FROM tbl_products ORDER BY product_id DESC") or die(mysqli_error($conn));
+                    $result = mysqli_query($conn,
+                    "SELECT product_name, product_id
+                    FROM tbl_products
+                    WHERE cat_id = 3") or die(mysqli_error($conn));
                     
                     while($data = mysqli_fetch_array($result)){
                         printf('
                         <div class="article">
                         <img src="img/nkar1.jpg"/> 
-                        <a class="title" href ="#"><h2>%s</h2></a> 
+                        <p>%s</p> 
+                        <p>%s</p>    
                         <div style="clear:both;"></div>
                         </div>
-                        ',$data["product_name"]);
+                        ',$data["product_id"], $data["product_name"]);
                     }
-
-                    
                 ?>
             
             </div>
             
             <div class="left">
                 <div class ="left_menu">
-                    <p class="menu_head">Category</p>
-                    <a href="samsung.php">Samsung</a>
-                    <a href="iphone.php">IPHONE</a>
-                    <a href="nokia.php">NOKIA</a>
-                    <a href="htc.php">HTC</a>
+                <p class="menu_head">Category</p>
+                <a href="samsung.php">Samsung</a>
+                <a href="iphone.php">IPHONE</a>
+                <a href="nokia.php">NOKIA</a>
+                <a href="htc.php">HTC</a>
                 </div>
                 <div class="left_bottom">
                     <div class ="divbutton">

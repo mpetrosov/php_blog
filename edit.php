@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            <a href="index.php"> <img id="logo" src="img/blog_header.jpg" /></a>
         </div>
         <div class="content">
-            <div class="left"> 
+            <div class="right"> 
                 
                 
                 <div class="form">
@@ -88,8 +88,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             </div>
             
-            <div class="right">
-                <div class ="right_menu">
+            <div class="left">
+                <div class ="left_menu">
                     <a href="##">Main</a>
                     <a href="##">Articles</a>
                     <a href="##">Video</a>
