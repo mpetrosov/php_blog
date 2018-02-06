@@ -25,10 +25,11 @@ include('includes/connect.php');
                         printf('
                         <div class="article">
                         <img src="img/nkar1.jpg"/> 
-                        <a class="title" href ="#"><h2>%s</h2></a> 
+                        <a class="title" href ="#"><h2>%s</h2></a>
+                        <p>%s</p> 
                         <div style="clear:both;"></div>
                         </div>
-                        ',$data["product_name"]);
+                        ',$data["product_name"], $data["description"]);
                     }
 
                     
