@@ -182,64 +182,77 @@ button{
     font-weight: bold;
     font-size: 20px;
 }
+/* textarea{
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    resize: none; 
+}
 
-  /* form {
-    background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-    background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-    margin: auto;
-    position: relative;
-    width: 550px;
-    height: 450px;
-    font-family: Tahoma, Geneva, sans-serif;
-    font-size: 14px;
-    font-style: italic;
-    line-height: 24px;
-    font-weight: bold;
-    color: #09C;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #999;
-    border: inset 1px solid #333;
-    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  input {
-    width: 375px;
-    display: block;
-    border: 1px solid #999;
-    height: 25px;
-    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  textarea#feedback {
-    width: 375px;
-    height: 150px;
-    display: block;
-  }
-  
-  button {
+button{
     width: 100px;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    background: #09C;
-    color: #fff;
-    font-family: Tahoma, Geneva, sans-serif;
     height: 30px;
-    border-radius: 15px;
-    border: 1p solid #999;
-  }
-  
-  input.button:hover {
-    background: #fff;
-    color: #09C;
-  } */
+    background-color: #282828;
+    border:none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.comment-box{
+    width: 400px;
+    padding-right: 20px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    border-radius: 4px; 
+    position: relative;
+}
+
+.comment-box p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #282828;
+    font-weight: 100;
+}
+
+.edit-form{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.edit-form button{
+    width: 40px;
+    height: 20px;
+    color: #282828;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.edit-form button:hover{
+    opacity: 1;
+    
+}
+
+.delete-form{
+    position: absolute;
+    top: 0px;
+    right: 60px;
+}
+.delete-form button{
+    width: 40px;
+    height: 20px;
+    color: #282828;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.delete-form button:hover{
+    opacity: 1;
+    
+} */
 
 .footer{
     width:100%;
