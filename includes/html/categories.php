@@ -14,9 +14,13 @@ while($data = mysqli_fetch_array($result)){
 }
 ?>
     </div>
+    <?php
+    $id = (isset($_GET["id"]) && $_GET["id"]) ? mysqli_real_escape_string($conn, $_GET["id"]) : null;
+    $buttonCaption = $id ? "Edit" : "Create";
+    ?>
     <div class="left_bottom">
         <div class ="divbutton">
-            <a href="edit.php">Login</a>
+            <a href="edit.php?id=<?php echo $id; ?>"><?php echo $buttonCaption; ?></a>
         </div>
     </div>
 </div>
