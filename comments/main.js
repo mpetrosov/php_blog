@@ -1,5 +1,6 @@
+
 shortcuts = {
-    "cd" : "CodeGorilla",
+    "cg" : "CodeGorilla",
     "ad" : "adres",
     "www" : "world wide web"
 }

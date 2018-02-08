@@ -13,7 +13,6 @@ function setComments($conn){
         $date = $_POST['date'];
         $message = $_POST['message'];
         $productId = $_POST['product_id'];
-        // $ableComment = isset($_POST['able_comments']) && $_POST['able_comments'] == 'on' ? 1 : 0;
 
         $sql = "INSERT INTO comments(uid, date, message, product_id) VALUES('$uid', '$date', '$message', '$productId')";
         $result = $conn->query($sql);

@@ -3,7 +3,7 @@
     
 
     include 'comments.inc.php';
-    include 'connect.php';
+    include('../includes/connect.php');
 
 ?>
 <!DOCTYPE html>
@@ -26,8 +26,9 @@
         <button type='submit' name='commentSubmit'>Comment</button>
     </form>";
 
-   getComments($conn);
-
+    getComments($conn);
+    
+    deleteComments($conn);
 ?>
 </body>
 </html>

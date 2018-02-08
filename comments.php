@@ -1,7 +1,7 @@
 <?php
 include('includes/connect.php');
 
-$productId = isset($_GET['id']) ? $_GET['id'] : null;
+$productId = isset($_GET['product_id']) ? $_GET['product_id'] : null;
 try {
     $productId = (int)$productId;
 } catch(Exception $err) {
@@ -18,7 +18,7 @@ while($data = mysqli_fetch_array($result)){
                 <?php echo nl2br($data['message']); ?>
             </p>
             <form class="delete-form" method="POST" action="/php_blog/comments/index.php?next=<?php echo $_SERVER['REQUEST_URI']; ?>">
-                <input type="hidden" name="cid" value="<? php echo $data['cid']; ?>">
+                <input type="hidden" name="cid" value="<?php echo $data['cid']; ?>">
                 <button type="submit" name="commentDelete">Delete</button>
             </form>
 

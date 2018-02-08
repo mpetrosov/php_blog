@@ -9,8 +9,8 @@ include('comments/comments.inc.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My  blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="comments/style.css" />
+    <script src="comments/main.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -18,9 +18,9 @@ include('comments/comments.inc.php');
            <a href="index.php"> <img id="logo" src="img/blog_header.jpg" /></a>
         </div>
         <div class="content">
-            <div class="right"> 
+            <div class="right" id="right"> 
                 <?php
-                    $id = (isset($_GET["id"]) && $_GET["id"])  ? mysqli_real_escape_string($conn, $_GET["id"]) : die('No id specified');
+                    $id = (isset($_GET["product_id"]) && $_GET["product_id"])  ? mysqli_real_escape_string($conn, $_GET["product_id"]) : die('No id specified');
 
                     $result = mysqli_query($conn,"SELECT * FROM tbl_products WHERE product_id=$id") or die(mysqli_error($conn));
                     $commentsAllowed = null;
@@ -33,22 +33,22 @@ include('comments/comments.inc.php');
                 <?php
                 if ((bool)$data['able_comments']) {
                 ?>
-                    <form method="POST" action='/php_blog/comments/index.php?next=<?php echo $_SERVER['REQUEST_URI']; ?><?php echo setComments($conn); ?>'>
-                        <input type="hidden" name='uid' value='Anonymous'>
-                        <input type="hidden" name='product_id' value="<?php echo $id; ?>">
+                    <form class ="comment-form" method="POST" action='/php_blog/comments/index.php?next=<?php echo $_SERVER['REQUEST_URI']; ?><?php echo setComments($conn); ?>'>
+                        <input type="hidden" name="uid" value="Anonymous">
+                        <input type="hidden" name="product_id" value="<?php echo $id; ?>">
                         <input type="hidden" name="date" value="<?php echo date('Y-m-d H:i:s'); ?>">
-                        <input type="checkbox" name="able_comments" checked>   
-                        <textarea name="message"></textarea><br>
+ 
+                        <textarea id="comment" name="message"></textarea><br>
                         <button type="submit" name='commentSubmit'>Comment</button>
                     </form>
                 <?php
                 }
                 ?>
-                    <?php include('includes/html/comments.php'); ?>
+                    <?php include('comments.php'); ?>
 
             </div>
         
-            <?php include('includes/html/categories.php'); ?>
+            <?php include('categories.php'); ?>
 
         </div>
     </div>

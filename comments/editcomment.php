@@ -1,7 +1,7 @@
 <?php
     date_default_timezone_set('Europe/Amsterdam');
     include 'comments.inc.php';
-    include 'connect.php';
+    include('../includes/connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
