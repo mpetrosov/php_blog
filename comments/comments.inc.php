@@ -2,7 +2,8 @@
 function redirectToNext() {
     $next = isset($_GET['next']) ? $_GET['next'] : null;
     if ($next) {
-        die(header('Location: '.$next));
+        header('Location: '.htmlspecialchars($next));
+        exit;
     }
 }
 
@@ -58,7 +59,7 @@ function editComments($conn){
        
        redirectToNext();
 
-       header("Location: index.php");
+    //    header("Location: index.php");
     }
 }
 
@@ -71,6 +72,6 @@ function deleteComments($conn){
 
         redirectToNext();
 
-        header("Location: index.php");
+        // header("Location: index.php");
     }
 }

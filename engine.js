@@ -1,8 +1,5 @@
-var lll;
-
 function loadCategoryContent(event) {
     event.preventDefault();
-    lll = event;
     var url = event.srcElement.href;
     var request = new XMLHttpRequest();
     request.open('GET', url, false);  // `false` makes the request synchronous

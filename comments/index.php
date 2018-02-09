@@ -4,6 +4,9 @@
 
     include 'comments.inc.php';
     include('../includes/connect.php');
+    setComments($conn);   
+    deleteComments($conn);     
+    getComments($conn);
 
 ?>
 <!DOCTYPE html>
@@ -19,16 +22,15 @@
 <body>
 
 <?php
-    echo "<form method='POST' action='".setComments($conn)."'>
+    echo "<form method='POST' action=''>
         <input type='hidden' name='uid' value='Anonymous'>
         <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>        
         <textarea id='comment' name='message'></textarea><br>
         <button type='submit' name='commentSubmit'>Comment</button>
     </form>";
 
-    getComments($conn);
     
-    deleteComments($conn);
+    
 ?>
 </body>
 </html>
