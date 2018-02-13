@@ -4,9 +4,16 @@ include('includes/connect.php');
 $result = mysqli_query($conn,"SELECT * FROM tbl_categories ORDER BY cat_name ASC") or die(mysqli_error($conn));
 ?>
 <div class="left">
+    <div class="left_form">
+        <form name="search_form" action="search.php" method="POST">
+            <input class="input_search" type="text" placeholder="Search" name="search">
+            <button class="button_search" type="submit" name="submit_search">GO</button>
+        </form>
+</div>
     <div class ="left_menu">
-        <p class="menu_head">Category</p>
+        <p class="menu_head"><a href="index.php">All categories</a></p>
 <?php
+
 while($data = mysqli_fetch_array($result)){
     if ($_SERVER['SCRIPT_NAME'] == '/php_blog/index.php') {
     ?>
@@ -31,3 +38,17 @@ while($data = mysqli_fetch_array($result)){
         </div>
     </div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Categories</title>
+    <script src="comments/main.js"></script>
+    <script src="engine.js"></script>
+</head>
+<body>
+    
+</body>
+</html>

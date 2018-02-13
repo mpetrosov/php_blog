@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Edit view | My  blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="comments/style.css" />
     <script src="comments/main.js"></script>
 </head>
 <body>
@@ -82,6 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="buttons">
                                 <button class="" type="submit">OK</button>
                             </div>
+
                         </div>
                     </form>
                         
