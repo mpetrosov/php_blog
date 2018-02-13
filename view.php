@@ -1,6 +1,8 @@
 <?php
+include_once('includes/session.inc.php');
 include('includes/connect.php');
 include('comments/comments.inc.php');
+include_once('includes/auth.inc.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +33,7 @@ include('comments/comments.inc.php');
                                 <p><?php echo $data["description"]; ?></p>
                             </div>
                 <?php
-                if ((bool)$data['able_comments']) {
+                if ((bool)$data['able_comments'] && isAuthenticated()) {
                 ?>
                     <form class ="comment-form" method="POST" action='/php_blog/comments/index.php?next=<?php echo $_SERVER['REQUEST_URI']; ?><?php echo setComments($conn); ?>'>
                         <input type="hidden" name="uid" value="Anonymous">

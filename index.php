@@ -1,4 +1,5 @@
 <?php
+include_once('includes/session.inc.php');
 include('includes/connect.php');
 date_default_timezone_set('Europe/Amsterdam');
 

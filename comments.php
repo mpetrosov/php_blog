@@ -1,5 +1,6 @@
 <?php
 include('includes/connect.php');
+include_once('includes/auth.inc.php');
 
 $productId = isset($_GET['product_id']) ? $_GET['product_id'] : null;
 try {
@@ -17,6 +18,9 @@ while($data = mysqli_fetch_array($result)){
                 <?php echo $data['date']; ?><br/>
                 <?php echo nl2br($data['message']); ?>
             </p>
+            <?php
+            if (isAdmin()) {
+            ?>
             <form class="delete-form" method="POST" action="/php_blog/comments/index.php?next=<?php echo $_SERVER['REQUEST_URI']; ?>">
                 <input type="hidden" name="cid" value="<?php echo $data['cid']; ?>">
                 <button type="submit" name="commentDelete">Delete</button>
@@ -29,7 +33,9 @@ while($data = mysqli_fetch_array($result)){
                 <input type="hidden" name="message" value="<?php echo $data['message']; ?>">
                 <button>Edit</button>
             </form>
-
+            <?php
+            }
+            ?>
         </div>
     <?php
 }

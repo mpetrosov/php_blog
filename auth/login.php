@@ -1,20 +1,6 @@
 <?php
-include('../includes/connect.php');
-if (!empty($_POST['email']) && !empty($_POST['password'])):
-    $email = $_POST['email'];
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = $email');
-    var_dump($email);
-    $records->execute();
-    
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-
-    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])){
-        die('We have a login');
-    }else{
-        die('There has been an error...');
-    }
-
-endif;
+    session_start();
+    include('../includes/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +20,9 @@ endif;
     <h1>Login</h1>
     <span> or <a href="register.php">register here</a></span>
 
-    <form action="login.php" method="POST">
-        <input type="text" placeholder="Enter your email" name="email">
-        <input type="password" placeholder="and password" name="password">
+    <form action="includes/login.inc.php" method="POST">
+        <input type="text"  name="username" placeholder="Username/email">
+        <input type="password"  name="pwd" placeholder="password">
         <input type="submit">
     </form>
 </body>

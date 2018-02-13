@@ -1,6 +1,12 @@
 <?php
+include_once('includes/session.inc.php');
 include('includes/connect.php');
 include('includes/conf.php');
+include_once('includes/auth.inc.php');
+
+if (!isAdmin()) {
+    die(header('Location: '.BASE_URL . "index.php?failed"));
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // print_r($_POST);

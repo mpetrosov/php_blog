@@ -1,5 +1,6 @@
 <?php
 include('includes/connect.php');
+include_once('includes/auth.inc.php');
 
 $result = mysqli_query($conn,"SELECT * FROM tbl_categories ORDER BY cat_name ASC") or die(mysqli_error($conn));
 ?>
@@ -9,7 +10,7 @@ $result = mysqli_query($conn,"SELECT * FROM tbl_categories ORDER BY cat_name ASC
             <input class="input_search" type="text" placeholder="Search" name="search">
             <button class="button_search" type="submit" name="submit_search">GO</button>
         </form>
-</div>
+    </div>
     <div class ="left_menu">
         <p class="menu_head"><a href="index.php">All categories</a></p>
 <?php
@@ -32,23 +33,35 @@ while($data = mysqli_fetch_array($result)){
     $id = (isset($_GET["product_id"]) && $_GET["product_id"]) ? mysqli_real_escape_string($conn, $_GET["product_id"]) : null;
     $buttonCaption = $id ? "Edit" : "Create";
     ?>
+
+    <?php
+    if (isAdmin()) {
+    ?>
     <div class="left_bottom">
         <div class ="divbutton">
             <a href="edit.php?product_id=<?php echo $id; ?>"><?php echo $buttonCaption; ?></a>
         </div>
     </div>
+    <?php
+    }
+    ?>
+
+    <div class="left_form">
+    <?php
+    if (!isAuthenticated()) {
+    ?>
+        <form action="includes/login.inc.php" method="POST">
+            <input type="text"  name="username" placeholder="Username/email"/>
+            <input type="password"  name="pwd" placeholder="password"/>
+            <input type="submit" value="Submit" />
+        </form>
+    <?php
+    } else {
+    ?>
+        <a href="logout.php">Log out</a>
+    <?php
+    }
+    ?>
+    </div>
+
 </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categories</title>
-    <script src="comments/main.js"></script>
-    <script src="engine.js"></script>
-</head>
-<body>
-    
-</body>
-</html>
