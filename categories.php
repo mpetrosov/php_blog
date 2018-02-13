@@ -2,6 +2,8 @@
 include('includes/connect.php');
 include_once('includes/auth.inc.php');
 
+// SELECT DISTINCT MONTH(`date`) AS `month`, YEAR(`date`) AS `year` FROM `tbl_products`
+
 $result = mysqli_query($conn,"SELECT * FROM tbl_categories ORDER BY cat_name ASC") or die(mysqli_error($conn));
 ?>
 <div class="left">

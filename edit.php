@@ -20,11 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Update action
         $id = mysqli_real_escape_string($conn, $_GET["product_id"]);
 
-        mysqli_query($conn, 'UPDATE `tbl_products` SET `product_name`="'.$product_name.'", `description`="'.$description.'", `able_comments`='.$ableComment.' WHERE `product_id`='.$id) or die(mysqli_error($conn));
+        $sql = 'UPDATE `tbl_products` SET `product_name`="'.$product_name.'", `description`="'.$description.'", `able_comments`='.$ableComment.' WHERE `product_id`='.$id;
+        mysqli_query($conn, $sql) or die(mysqli_error($conn));
     } else {
         // Insert action
         // We need to get the new $id
-        mysqli_query($conn, 'INSERT INTO `tbl_products` (`product_name`, `description`, `able_comments`) VALUES ("'.$product_name.'", "'.$description.'", '.$ableComment.')') or die(mysqli_error($conn));
+        $sql = 'INSERT INTO `tbl_products` (`product_name`, `description`, `able_comments`, `date`) VALUES ("'.$product_name.'", "'.$description.'", '.$ableComment.', NOW())';
+        mysqli_query($conn, $sql) or die(mysqli_error($conn));
         $id = mysqli_insert_id($conn);
     }
 

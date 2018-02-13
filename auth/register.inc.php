@@ -1,7 +1,4 @@
-<?php 
-
-// var_dump($_POST);
-// die();
+<?php
 
     if (isset($_POST['submit']) || true) {
         include_once '../../includes/connect.php';
