@@ -3,12 +3,16 @@ include('includes/connect.php');
 include_once('includes/auth.inc.php');
 
 // SELECT DISTINCT MONTH(`date`) AS `month`, YEAR(`date`) AS `year` FROM `tbl_products`
+// we add two GET arguments:
+// - month
+// - year
+// example: load_products.php?month=2&year=2018
 
 $result = mysqli_query($conn,"SELECT * FROM tbl_categories ORDER BY cat_name ASC") or die(mysqli_error($conn));
 ?>
 <div class="left">
     <div class="left_form">
-        <form name="search_form" action="search.php" method="POST">
+        <form class="search_form" name="search_form" action="search.php" method="POST">
             <input class="input_search" type="text" placeholder="Search" name="search">
             <button class="button_search" type="submit" name="submit_search">GO</button>
         </form>
@@ -48,14 +52,21 @@ while($data = mysqli_fetch_array($result)){
     }
     ?>
 
-    <div class="left_form">
+    <div class="left_login">
     <?php
     if (!isAuthenticated()) {
     ?>
-        <form action="includes/login.inc.php" method="POST">
-            <input type="text"  name="username" placeholder="Username/email"/>
-            <input type="password"  name="pwd" placeholder="password"/>
-            <input type="submit" value="Submit" />
+        <span class="switch-forms">sign up</span>
+        <form class="register-form hidden" action="includes/register.inc.php" method="POST">
+            <input class="signup_up" type="text" name="email" placeholder="example@example.com" >
+            <input class="signup_middel" type="text" name="username" placeholder="Username" >
+            <input class="signup_down" type="password" name="pwd" placeholder="Password" >
+            <button class="submit" type="submit">signup</button>
+        </form>
+        <form class="login-form" action="includes/login.inc.php" method="POST">
+            <input class="login_up" type="text"  name="username" placeholder="Username/email"/>
+            <input class="login_down" type="password"  name="pwd" placeholder="password"/>
+            <button class="submit" type="submit">login</button>
         </form>
     <?php
     } else {

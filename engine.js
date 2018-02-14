@@ -18,3 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 }, false);
+
+
+
+
+jQuery(function(){
+    $('.switch-forms').click(function () {
+        $(this).text(
+           "sign up" ? "login" : "sign up"
+        );
+
+        $('.login-form').toggleClass('hidden');
+        $('.register-form').toggleClass('hidden');
+    });
+
+});
+
+

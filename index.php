@@ -18,8 +18,6 @@ try {
     <title>My  blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="comments/style.css" />
-    <script src="comments/main.js"></script>
-    <script src="engine.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -42,6 +40,12 @@ try {
         <div style="clear:both;"></div>
         <div class="footer">My blog 2018</div>
     
-    
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+    <!-- <script src="comments/main.js"></script> -->
+    <script src="engine.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 include('includes/connect.php');
 date_default_timezone_set('Europe/Amsterdam');
 
+//SELECT * FROM `tbl_products` WHERE MONTH(`date`) = 2 AND YEAR(`date`) = 2018
+
 $categoryId = isset($_GET['cat_id']) ? $_GET['cat_id'] : null;
 try {
     $categoryId = (int)$categoryId;

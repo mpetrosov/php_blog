@@ -35,6 +35,17 @@ body{
     margin: auto; 
 }
 
+.hidden {
+    display: none;
+}
+
+.switch-forms {
+    font-size: 15px;
+    margin-left: 0;
+    cursor: pointer;
+    color: blue;
+}
+
 .content{
     width: 101%;
 }
@@ -78,21 +89,72 @@ body{
 }
 
 
-.left{
+div.left{
+    text-align: center;
     margin-top: 10px;
     width: 190px;
-    height: auto;
+    height: 500px;
     float: left;
     background: #87CEEB;
     border: 5px solid #444444;
     border-radius: 10px;
 }
+
+.left_login{
+    margin: center;
+    margin-top: 20px;
+    height: 70px;
+    width: 190px;
+}
+form.login-form{
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+input.login_up{
+    text-align: center;
+    height: 10px;
+    width: 100px;
+    margin-bottom: 4px;
+}
+
+input.login_down{
+    text-align: center;
+    height: 10px;
+    width: 100px;
+    margin-bottom: 4px;
+}
+button.submit{
+    margin-top: 10px;
+    width: 60px;
+    height: 20px;
+    background-color: #444444;
+    margin-left: 0px;
+}
+
 div.left_form{
-    margin-left: 30px;
+    margin-left: 0px;
     margin-top: 5px;
     height: 70px;
 }
+
+input.signup_up{
+    width: 100px;
+    height: 10px;
+    margin-bottom: 4px;
+}
+input.signup_middel{
+    width: 100px;
+    height: 10px;
+    margin-bottom: 4px;
+}
+input.signup_down{
+    width: 100px;
+    height: 10px;
+    margin-bottom: 4px;
+}
 input.input_search{
+    margin-left:0px;
     text-align: center;
     height: 10px;
     width: 100px;
@@ -103,7 +165,7 @@ button.button_search{
     width: 60px;
     height: 20px;
     background-color: #444444;
-    margin-left: 40px;
+    margin: 10px;
 }
 
 .left_menu a{
@@ -142,11 +204,7 @@ h2 {
     border-radius: 15px;
     text-decoration: none;
 }
-  
-.form{
-    width:500px;
-    padding-top: 10px;
-}
+
 
 .row{
     clear:both; 

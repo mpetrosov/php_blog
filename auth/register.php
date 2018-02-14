@@ -21,6 +21,7 @@
     <h1>Register</h1>
     <span> or <a href="login.php">login here</a></span>
 
+    <div class="register-form">
     <form action="includes/register.inc.php" method="POST">
         <input type="text" name="email" placeholder="example@example.com" >
         <input type="text" name="username" placeholder="Username" >

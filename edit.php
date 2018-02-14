@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Edit view | My  blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="comments/style.css" />
-    <script src="comments/main.js"></script>
+    <script src="engine.js"></script>
 </head>
 <body>
     <div class="wrapper">
