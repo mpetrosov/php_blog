@@ -11,6 +11,7 @@ include_once('includes/auth.inc.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My  blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen" href="comments/style.css" />
     <script src="comments/main.js"></script>
 </head>
