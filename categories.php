@@ -52,22 +52,24 @@ while($data = mysqli_fetch_array($result)){
     }
     ?>
 
-    <div class="left_login">
+    <div class="left_login"> 
     <?php
     if (!isAuthenticated()) {
     ?>
-        <span class="switch-forms">sign up</span>
-        <form class="register-form hidden" action="includes/register.inc.php" method="POST">
-            <input class="signup_up" type="text" name="email" placeholder="example@example.com" >
-            <input class="signup_middel" type="text" name="username" placeholder="Username" >
-            <input class="signup_down" type="password" name="pwd" placeholder="Password" >
-            <button class="submit" type="submit">signup</button>
-        </form>
+            <a href="forgotpsw.php"> forgot your password?</a> 
+            <span id="sign-up" class="switch-forms">sign up</span><br> <span id="log-in" class="switch-forms">login</span>
+                <form class="register-form hidden" action="includes/register.inc.php" method="POST">
+                    <input class="signup_up" type="text" name="email" placeholder="example@example.com" >
+                    <input class="signup_middel" type="text" name="username" placeholder="Username" >
+                    <input class="signup_down" type="password" name="pwd" placeholder="Password" >
+                    <button class="submit" type="submit">signup</button>
+                </form>
         <form class="login-form" action="includes/login.inc.php" method="POST">
             <input class="login_up" type="text"  name="username" placeholder="Username/email"/>
             <input class="login_down" type="password"  name="pwd" placeholder="password"/>
             <button class="submit" type="submit">login</button>
         </form>
+      
     <?php
     } else {
     ?>

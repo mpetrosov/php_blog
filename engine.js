@@ -23,14 +23,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 jQuery(function(){
-    $('.switch-forms').click(function () {
+    $('#log-in').click(function(){
         $(this).text(
-           "sign up" ? "login" : "sign up"
+            // "password recovery" ? "sign up" : "password recovery"         
+            
+         );
+        $('.login-form').removeClass('hidden');
+        $('.register-form').addClass('hidden');
+       // $('.pwdrecov-form').removeClass('hidden');
+    });
+    
+    $('#sign-up').click(function () {
+        $(this).text(
+        //    "sign up" ? "login" : "sign up"         
+           
         );
 
-        $('.login-form').toggleClass('hidden');
-        $('.register-form').toggleClass('hidden');
+        $('.login-form').addClass('hidden');
+        $('.register-form').removeClass('hidden');
+       // $('.pwdrecov-form').addClass('hidden');
+       
     });
+
+        // $('#pwd-rec').click(function(){
+        //     $(this).text(
+        //         // "password recovery" ? "sign up" : "password recovery"         
+                
+        //      );
+        //     $('.login-form').removeClass('hidden');
+        //     $('.register-form').addClass('hidden');
+        //     $('.pwdrecov-form').addClass('hidden');
+        // });
 
 });
 

@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -33,6 +33,7 @@
     
     
 ?>
+
 </body>
 </html>
 

@@ -35,7 +35,7 @@
                         // Hashing the password
                         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
                         // Insert the user into the database
-                        $sql = "INSERT INTO users (username, email, user_pwd) VALUES ('$email', '$username', '$hashedPwd');";
+                        $sql = "INSERT INTO users (username, email, user_pwd) VALUES ('$username','$email' , '$hashedPwd');";
                         mysqli_query($conn, $sql);
                         header("Location: ../index.php?register=succes");
                         exit();
