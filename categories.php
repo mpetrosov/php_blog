@@ -56,7 +56,7 @@ while($data = mysqli_fetch_array($result)){
     <?php
     if (!isAuthenticated()) {
     ?>
-            <a href="forgotpsw.php"> forgot your password?</a> 
+            <a href="forgot_password.php"> forgot your password?</a> 
             <span id="sign-up" class="switch-forms">sign up</span><br> <span id="log-in" class="switch-forms">login</span>
                 <form class="register-form hidden" action="includes/register.inc.php" method="POST">
                     <input class="signup_up" type="text" name="email" placeholder="example@example.com" >
