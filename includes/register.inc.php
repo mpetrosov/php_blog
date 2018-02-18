@@ -33,7 +33,7 @@
                         exit();
                     } else {
                         // Hashing the password
-                        $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+                        $hashedPwd = password_hash($pwd, PASSWORD_BCRYPT);
                         // Insert the user into the database
                         $sql = "INSERT INTO users (username, email, user_pwd) VALUES ('$username','$email' , '$hashedPwd');";
                         mysqli_query($conn, $sql);

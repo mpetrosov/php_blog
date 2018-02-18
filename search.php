@@ -18,7 +18,6 @@ date_default_timezone_set('Europe/Amsterdam');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="comments/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-    <script src="comments/main.js"></script>
     <script src="engine.js"></script>
 </head>
 <body>
